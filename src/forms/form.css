@@ -1,0 +1,19 @@
+.app-form {
+  display: flex;
+  flex-direction: row;
+  background-color: aliceblue;
+  padding: 20px;
+  color: black;
+  align-items: flex-start;
+  margin: 10px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.app-form * {
+  margin: 5px 0px;
+}
+
+.app-form button {
+  width: 100%;
+}
