@@ -1,21 +1,12 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+import binIcon from "../assets/bin.svg";
 
-function EducationForm({ educationData, changeHandler }) {
-  const [educationFormData, setEducationFormData] = useState(educationData);
-
-  function dataChangeHandler(event) {
-    console.log(event);
-    const { name, value } = event.target;
-    setEducationFormData(
-      { ...educationFormData },
-      (educationFormData[name] = value)
-    );
-
-    changeHandler(educationFormData);
-  }
-
+function EducationForm({ educationData, changeHandler, deleteHandler }) {
   return (
-    <form id="form-education" className="app-form">
+    <div id="form-education" className="app-form">
+      <button className="delete-btn" onClick={deleteHandler}>
+        <img src={binIcon} alt="delete-btn" />
+      </button>
       {/* School Name */}
       <label htmlFor="school">School</label>
       <input
@@ -24,44 +15,41 @@ function EducationForm({ educationData, changeHandler }) {
         id="form-education-school"
         onChange={changeHandler}
         required
-        value={educationFormData.school}
+        value={educationData.school}
       />
-
       {/* Qualification attained */}
       <label htmlFor="qualification">Qualification</label>
       <input
         type="text"
         name="qualification"
         id="form-education-qualification"
-        onChange={dataChangeHandler}
+        onChange={changeHandler}
         required
-        value={educationFormData.qualification}
+        value={educationData.qualification}
       />
-
       {/* Grade */}
       <label htmlFor="grade">Grade</label>
       <input
         type="text"
         name="grade"
         id="form-education-grade"
-        onChange={dataChangeHandler}
+        onChange={changeHandler}
         required
-        value={educationFormData.grade}
+        value={educationData.grade}
       />
-
       {/* Year of graduation */}
       <label htmlFor="graduationYear">Year of Graduation</label>
       <input
         type="number"
         name="graduationYear"
         id="form-education-graduationYear"
-        onChange={dataChangeHandler}
+        onChange={changeHandler}
         required
         max={2999}
         min={1900}
-        value={educationFormData.graduationDate}
+        value={educationData.graduationYear}
       />
-    </form>
+    </div>
   );
 }
 

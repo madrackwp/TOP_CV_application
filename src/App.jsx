@@ -11,20 +11,26 @@ function App() {
       number: "93939393",
       email: "t.chang@abc.com",
     },
-    education: {
-      school: "ABC University",
-      qualification: "Bachelors of Enginger",
-      grade: "First Class Honours",
-      graduationYear: "2024",
-    },
-    workExp: {
-      company: "XYZ Bank",
-      location: "Singapore",
-      role: "Software Enginger",
-      startDate: "2019-01",
-      endDate: "2023-12",
-      description: "I helped many things",
-    },
+    education: [
+      {
+        id: 123,
+        school: "ABC University",
+        qualification: "Bachelors of Enginger",
+        grade: "First Class Honours",
+        graduationYear: "2024",
+      },
+    ],
+    workExp: [
+      {
+        id: 132,
+        company: "XYZ Bank",
+        location: "Singapore",
+        role: "Software Enginger",
+        startDate: "2019-01",
+        endDate: "2023-12",
+        description: "I helped many things",
+      },
+    ],
   });
 
   function handleFormDataChange(type, newForm) {
@@ -36,11 +42,8 @@ function App() {
     } else {
       form.workExp = newForm;
     }
-    console.log(form);
+    // console.log(form);
     setFormData(form);
-    // console.log("I AM THE BIG COMPONENT");
-    // setFormData(newForm);
-    // console.log(formData);
   }
 
   return (

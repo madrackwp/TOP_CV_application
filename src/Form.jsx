@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import "./App.css";
 import Personal from "./forms/Personal";
 import Education from "./forms/Education";
 import WorkExp from "./forms/WorkExp";
-import { useState } from "react";
+// import { useState } from "react";
 
 function Form({ formData, onSubmit }) {
   // const handleSubmit = (formData) => {
@@ -12,9 +13,6 @@ function Form({ formData, onSubmit }) {
   let personalformData = formData.personal;
   let educationFormData = formData.education;
   let workExpFormData = formData.workExp;
-
-  // console.log("I AM IN THE FORM!");
-  // console.log(formData);
 
   return (
     <div className="app-form-main">

@@ -1,4 +1,5 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+// import { useState } from "react";
 import {
   Page,
   Text,
@@ -78,32 +79,37 @@ function Resume({ formData }) {
         {/* Education info */}
         <View style={styles.section}>
           <Text style={styles.header}>Education:</Text>
-          <View>
-            <View>
-              <Text>{education.school}</Text>
-              <Text>{education.graduationYear}</Text>
+          {education.map((edu) => (
+            <View key={edu.id}>
+              <View>
+                <Text>{edu.school}</Text>
+                <Text>{edu.graduationYear}</Text>
+              </View>
+              <View>
+                <Text>{edu.qualification}</Text>
+                <Text>{edu.grade}</Text>
+              </View>
             </View>
-            <View>
-              <Text>{education.qualification}</Text>
-              <Text>{education.grade}</Text>
-            </View>
-          </View>
+          ))}
         </View>
 
         {/* Work Exp info */}
         <View style={styles.section}>
-          <Text style={styles.header}>Work Experience</Text>
-
-          <View>
-            <Text>{workExp.company}</Text>
-            <Text>
-              {workExp.startDate} - {workExp.endDate}
-            </Text>
-          </View>
-          <Text>{workExp.role}</Text>
-          <View>
-            <Text>{workExp.description}</Text>
-          </View>
+          <Text style={styles.header}>Work Experience:</Text>
+          {workExp.map((exp) => (
+            <View key={exp.id}>
+              <View>
+                <Text>{exp.company}</Text>
+                <Text>
+                  {exp.startDate} - {exp.endDate}
+                </Text>
+              </View>
+              <Text>{exp.role}</Text>
+              <View>
+                <Text>{exp.description}</Text>
+              </View>
+            </View>
+          ))}
         </View>
       </Page>
     </Document>
