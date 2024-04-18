@@ -19,6 +19,26 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  overflow: scroll;
+}
+
+.app-form-main .form-container {
+  margin: 10px;
+}
+
+.form-container h2 {
+  margin: 0px;
+}
+
+.app-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-form div input,
+.app-form div input {
+  display: flex;
+  flex-direction: column;
 }
 
 .app-form-main * {

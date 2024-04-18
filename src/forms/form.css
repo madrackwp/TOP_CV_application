@@ -1,19 +1,132 @@
-.app-form {
-  display: flex;
-  flex-direction: row;
-  background-color: aliceblue;
-  padding: 20px;
-  color: black;
-  align-items: flex-start;
-  margin: 10px;
-  border-radius: 10px;
-  flex-wrap: wrap;
+input {
+  margin: 0px;
 }
 
-.app-form * {
-  margin: 5px 0px;
+textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
 }
+
+.workexp-description {
+  width: 90%;
+}
+
+.app-form {
+  display: grid;
+  color: black;
+  margin: 10px 0 20px 0;
+  justify-items: start;
+  align-items: center;
+}
+
+.app-form#form-personal {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "name name"
+    "contact-number email";
+}
+
+.app-form#form-personal .per-name {
+  grid-area: name;
+}
+.app-form#form-personal .per-number {
+  grid-area: contact-number;
+}
+.app-form#form-personal .per-email {
+  grid-area: email;
+}
+
+#form-education,
+#form-workExp {
+  position: relative;
+}
+
+.app-form.app-form-education {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "school qualification"
+    "grade gradeyear";
+  gap: 5px;
+}
+
+#form-education .app-form .edu-school {
+  grid-area: school;
+}
+#form-education .app-form .edu-qualification {
+  grid-area: qualification;
+}
+#form-education .app-form .edu-grade {
+  grid-area: grade;
+}
+#form-education .app-form .edu-gradyear {
+  grid-area: gradeyear;
+}
+
+.app-form.app-form-workexp {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "company location role"
+    "startdate enddate test"
+    "description description description";
+  gap: 5px;
+}
+
+.form-container .update-btn {
+  margin-top: 20px;
+}
+
+#form-workExp .app-form .workexp-company {
+  grid-area: company;
+}
+#form-workExp .app-form .workexp-location {
+  grid-area: location;
+}
+#form-workExp .app-form .workexp-role {
+  grid-area: role;
+}
+#form-workExp .app-form .workexp-startdate {
+  grid-area: startdate;
+}
+#form-workExp .app-form .workexp-enddate {
+  grid-area: enddate;
+}
+#form-workExp .app-form .workexp-description {
+  grid-area: description;
+}
+.app-form .delete-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%px;
+}
+
+/* .app-form * {
+  margin: 5px 0px;
+} */
 
 .app-form button {
   /* width: 100%; */
+}
+
+.work-exp-form {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.work-exp-form button {
+  position: absolute;
+}
+
+.form-container {
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-container h2 {
+  color: black;
 }

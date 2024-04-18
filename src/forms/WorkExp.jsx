@@ -56,18 +56,23 @@ function WorkExp({ formData, onSubmit }) {
   }
 
   return (
-    <form id="form-workExp" className="app-form" onSubmit={handleSubmit}>
+    <form id="form-workExp" className="form-container" onSubmit={handleSubmit}>
       <h2>Work Experience</h2>
       <button onClick={addEntry} className="new-entry"></button>
       {workExpFormData.map((workExp, index) => (
-        <WorkExpForm
-          key={workExp.id}
-          workExpData={workExp}
-          changeHandler={(event) => formChangeHandler(event, index)}
-          deleteHandler={(event) => deleteHandler(event, index)}
-        />
+        <>
+          <WorkExpForm
+            key={workExp.id}
+            workExpData={workExp}
+            changeHandler={(event) => formChangeHandler(event, index)}
+            deleteHandler={(event) => deleteHandler(event, index)}
+          />
+          {index < workExpFormData.length - 1 && <hr />}
+        </>
       ))}
-      <button type="submit">Add Info</button>
+      <button type="submit" className="update-btn">
+        Add Info
+      </button>
     </form>
   );
 }

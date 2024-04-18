@@ -47,19 +47,28 @@ function Education({ formData, onSubmit }) {
   }
 
   return (
-    <form id="form-education" className="app-form" onSubmit={handleSubmit}>
+    <form
+      id="form-education"
+      className="form-container"
+      onSubmit={handleSubmit}
+    >
       <h2>Education</h2>
       <button onClick={newEntry} className="new-entry"></button>
       {educationFormData.map((education, index) => (
-        <EducationForm
-          educationData={education}
-          key={education.id}
-          changeHandler={(event) => changeHandler(event, index)}
-          deleteHandler={(event) => deleteHandler(event, index)}
-        />
+        <>
+          <EducationForm
+            educationData={education}
+            key={education.id}
+            changeHandler={(event) => changeHandler(event, index)}
+            deleteHandler={(event) => deleteHandler(event, index)}
+          />
+          {index < educationFormData.length - 1 && <hr />}
+        </>
       ))}
 
-      <button type="submit">Add Info</button>
+      <button type="submit" className="update-btn">
+        Add Info
+      </button>
     </form>
   );
 }
