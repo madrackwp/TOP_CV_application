@@ -7,21 +7,21 @@
 @font-face {
   font-family: "Roboto";
   font-weight: bold;
-  src: url("../assets/Roboto/Roboto-Bold.ttf") format("truetype");
+  src: url("./assets/Roboto/Roboto-Bold.ttf") format("truetype");
   /* Add additional font formats and variations as needed */
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: bold;
-  src: url("../assets/Roboto/Roboto-Bold.ttf") format("truetype");
+  src: url("./assets/Roboto/Roboto-Bold.ttf") format("truetype");
   /* Add additional font formats and variations as needed */
 }
 
 @font-face {
   font-family: "Roboto";
   font-style: italic;
-  src: url("../assets/Roboto/Roboto-Italic.ttf") format("truetype");
+  src: url("./assets/Roboto/Roboto-Italic.ttf") format("truetype");
   /* Add additional font formats and variations as needed */
 }
 
