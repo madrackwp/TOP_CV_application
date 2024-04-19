@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   },
   page: {
     flexDirection: "column",
-    fontFamily: "Roboto",
+    // fontFamily: "Roboto",
   },
   section: {
     marginTop: 10,
