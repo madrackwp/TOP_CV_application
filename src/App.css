@@ -3,7 +3,10 @@
   width: 100vw;
   justify-content: space-evenly;
   height: 100vh;
-  padding: 30px;
+}
+
+.app-home > div {
+  margin: 45px;
 }
 
 .app-home .app-resume {
@@ -20,6 +23,8 @@
   flex-direction: column;
   justify-content: flex-start;
   overflow: scroll;
+  overflow-x: hidden;
+  padding: 0 !important;
 }
 
 .app-form-main .form-container {

@@ -39,13 +39,39 @@ const styles = StyleSheet.create({
     // width: 100%
   },
   section: {
-    margin: 10,
+    marginTop: 10,
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom: 0,
     padding: 10,
     // flexGrow: 1,
+    borderBottom: 1,
+    borderColor: "black",
+  },
+  sectionEntry: {
+    marginTop: 10,
   },
   header: {
-    fontSize: "20px",
+    fontSize: "24px",
     fontStyle: "bold",
+    marginTop: "0px",
+    marginBottom: 10,
+  },
+  jobHeader: {
+    // flex: true,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  fontItalic: {
+    fontStyle: "italic",
+  },
+  fontBold: {
+    fontStyle: "bold",
+  },
+
+  fontBoldItalic: {
+    fontStyle: "italic",
+    fontWeight: "bold",
   },
 });
 
@@ -75,14 +101,15 @@ function Resume({ formData }) {
             </Text>
           </View>
         </View>
+        <hr />
 
         {/* Education info */}
         <View style={styles.section}>
           <Text style={styles.header}>Education:</Text>
           {education.map((edu) => (
-            <View key={edu.id}>
-              <View>
-                <Text>{edu.school}</Text>
+            <View style={styles.sectionEntry} key={edu.id}>
+              <View style={styles.jobHeader}>
+                <Text style={styles.fontBold}>{edu.school}</Text>
                 <Text>{edu.graduationYear}</Text>
               </View>
               <View>
@@ -97,14 +124,14 @@ function Resume({ formData }) {
         <View style={styles.section}>
           <Text style={styles.header}>Work Experience:</Text>
           {workExp.map((exp) => (
-            <View key={exp.id}>
-              <View>
-                <Text>{exp.company}</Text>
+            <View style={styles.sectionEntry} key={exp.id}>
+              <View style={styles.jobHeader}>
+                <Text style={styles.fontBold}>{exp.company}</Text>
                 <Text>
-                  {exp.startDate} - {exp.endDate}
+                  {exp.startDate} to {exp.endDate}
                 </Text>
               </View>
-              <Text>{exp.role}</Text>
+              <Text style={styles.fontBoldItalic}>{exp.role}</Text>
               <View>
                 <Text>{exp.description}</Text>
               </View>
