@@ -17,8 +17,8 @@ Font.register({
   fonts: [
     {
       src: "src/assets/Roboto/Roboto-Regular.ttf",
-    }, // font-style: normal, font-weight: normal
-    { src: "src/assets/Roboto/Roboto-Bold.ttf", fontStyle: "bold" },
+    },
+    { src: "src/assets/Roboto/Roboto-Bold.ttf", fontWeight: "bold" },
     { src: "src/assets/Roboto/Roboto-Italic.ttf", fontStyle: "italic" },
   ],
 });
@@ -31,12 +31,7 @@ const styles = StyleSheet.create({
   },
   page: {
     flexDirection: "column",
-    // fontFamily: "Roboto",
-    // color: "pink",
-    fontStyle: "normal",
-    fontWeight: "normal",
-    // backgroundColor: "#E4E4E4",
-    // width: 100%
+    fontFamily: "Roboto",
   },
   section: {
     marginTop: 10,
@@ -66,9 +61,8 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
   },
   fontBold: {
-    fontStyle: "bold",
+    fontWeight: "bold",
   },
-
   fontBoldItalic: {
     fontStyle: "italic",
     fontWeight: "bold",
