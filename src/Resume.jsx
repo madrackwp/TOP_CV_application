@@ -16,10 +16,10 @@ Font.register({
   family: "Roboto",
   fonts: [
     {
-      src: "./src/assets/Roboto/Roboto-Regular.ttf",
+      src: "src/assets/Roboto/Roboto-Regular.ttf",
     },
-    { src: "./src/assets/Roboto/Roboto-Bold.ttf", fontWeight: "bold" },
-    { src: "./src/assets/Roboto/Roboto-Italic.ttf", fontStyle: "italic" },
+    { src: "src/assets/Roboto/Roboto-Bold.ttf", fontWeight: "bold" },
+    { src: "src/assets/Roboto/Roboto-Italic.ttf", fontStyle: "italic" },
   ],
 });
 
