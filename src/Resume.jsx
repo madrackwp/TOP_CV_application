@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-// import { useState } from "react";
+
 import {
   Page,
   Text,
@@ -7,27 +7,23 @@ import {
   Document,
   StyleSheet,
   PDFViewer,
-  Font,
 } from "@react-pdf/renderer";
 
-// const fontSrc = "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+import { Font } from "@react-pdf/renderer";
 
 Font.register({
   family: "Roboto",
   fonts: [
-    {
-      src: "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
-    },
-    {
-      src: "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap",
-      fontWeight: "bold",
-    },
-    {
-      src: "https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap",
-      fontStyle: "italic",
-    },
+    { src: "./assets/Roboto/Roboto-Regular.ttf", fontWeight: 400 },
+    { src: "./assets/Roboto/Roboto-Bold.ttf", fontWeight: "bold" },
+    { src: "./assets/Roboto/Roboto-Italic.ttf", fontWeight: "italic" },
   ],
 });
+
+// Font.register({
+//   family: "Roboto",
+//   src: "/Users/wpgoh/Documents/TheOdinProject/TOP_CV_application/src/assets/Roboto/Roboto-Regular.ttf",
+// });
 
 const styles = StyleSheet.create({
   body: {
@@ -54,7 +50,7 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: "24px",
-    fontStyle: "bold",
+    // fontStyle: "bold",
     marginTop: "0px",
     marginBottom: 10,
   },
@@ -63,16 +59,16 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  fontItalic: {
-    fontStyle: "italic",
-  },
-  fontBold: {
-    fontWeight: "bold",
-  },
-  fontBoldItalic: {
-    fontStyle: "italic",
-    fontWeight: "bold",
-  },
+  // fontItalic: {
+  // fontStyle: "italic",
+  // },
+  // fontBold: {
+  // fontWeight: "bold",
+  // },
+  // fontBoldItalic: {
+  //   fontStyle: "italic",
+  //   fontWeight: "bold",
+  // },
 });
 
 function Resume({ formData }) {
@@ -81,7 +77,7 @@ function Resume({ formData }) {
   let personal = formData.personal;
   let education = formData.education;
   let workExp = formData.workExp;
-
+  // console.log(RobotoBold);
   // console.log(personal.name);
   const MyDocument = () => (
     <Document>
